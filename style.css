@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', monospace;
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -11,19 +11,28 @@ body {
 
 .container {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     border: 2px solid #ffffff;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    width: 90%;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #question {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #buttons {
@@ -31,30 +40,64 @@ h1 {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 24px;
+    font-size: 18px;
     background-color: #000000;
     color: #ffffff;
     border: 2px solid #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 button:hover {
     background-color: #ffffff;
     color: #000000;
+    transform: scale(1.05);
 }
 
 #result {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin-top: 20px;
+    min-height: 60px;
 }
 
 #restart {
     display: none;
     margin-top: 20px;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #333;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
 }
