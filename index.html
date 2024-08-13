@@ -9,6 +9,13 @@
 <body>
     <div class="container">
         <h1>Birthday Guesser</h1>
+        <div id="difficulty">
+            <select id="difficulty-select">
+                <option value="date">Guess Exact Date</option>
+                <option value="month">Guess Month</option>
+                <option value="season">Guess Season</option>
+            </select>
+        </div>
         <div id="question"></div>
         <div id="buttons">
             <button id="before">Before</button>
@@ -20,6 +27,7 @@
         <div id="progress-bar">
             <div id="progress"></div>
         </div>
+        <div id="calendar"></div>
     </div>
     <script src="script.js"></script>
 </body>

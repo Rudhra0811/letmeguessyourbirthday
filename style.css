@@ -5,8 +5,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,7 +17,7 @@ body {
     border: 2px solid #ffffff;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
 }
 
@@ -86,6 +88,36 @@ button:hover {
     height: 100%;
     background-color: #ffffff;
     transition: width 0.5s ease;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.day {
+    aspect-ratio: 1;
+    background-color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.day.active {
+    background-color: #ffffff;
+}
+
+#difficulty {
+    margin-bottom: 20px;
+}
+
+#difficulty select {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 @keyframes fadeIn {
